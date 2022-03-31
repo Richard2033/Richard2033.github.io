@@ -6,7 +6,7 @@
     <meta name="referrer" content="origin">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <title>2022.03.31雅思</title>
+    <title>软件设计模式</title>
     <link rel="shortcut icon" href="#"/>
 
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/font/LongCang.css">
@@ -32,19 +32,19 @@
     <div class="header">
         <div class="vertical">
             <div class="inner">
-                <h1 class="header-subtitle">2022.03.31雅思</h1>
+                <h1 class="header-subtitle">软件设计模式</h1>
                 <div class="header-subinfo">
                     <p class="article-info-text">
                         <span>
                             <i class="iconfont icon-time"></i> 发表时间：2022-03-31
                         </span>
                         
-                            <span id="http://example.com/2022/03/31/“2022-03-31雅思”/" class="leancloud_visitors" data-flag-title="2022.03.31雅思">
+                            <span id="http://example.com/2022/03/31/软件设计模式/" class="leancloud_visitors" data-flag-title="软件设计模式">
                                 <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
                             </span>
                         
                         <span>
-                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="http://example.com/2022/03/31/“2022-03-31雅思”/"></span>
+                            <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="http://example.com/2022/03/31/软件设计模式/"></span>
                         </span>  
                     </p>                 
                 </div>
@@ -58,7 +58,29 @@
         <div id="article">
     <div class="toc"></div>
     <div class="article-body">
-        <h1 id="1-雅思长难句"><a href="#1-雅思长难句" class="headerlink" title="1.雅思长难句"></a>1.雅思长难句</h1>
+        <h2 id="8-模板方法模式（封装算法）"><a href="#8-模板方法模式（封装算法）" class="headerlink" title="8.模板方法模式（封装算法）"></a>8.模板方法模式（封装算法）</h2><p>模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现</p>
+<p>这个方法专注在算法的本身，而由子类提供完整的实现</p>
+<h3 id="模式定义和所有细节："><a href="#模式定义和所有细节：" class="headerlink" title="模式定义和所有细节："></a><strong>模式定义和所有细节：</strong></h3><p>1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。</p>
+<p>2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤</p>
+<p><font color='red'>模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，还可以确保算法的结构不变，由子类提供部分实现</font></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">      AbstractClass &lt;|.. ConcreteClass</span><br><span class="line">    class  AbstractClass&#123;</span><br><span class="line">     primitiveOperation1()</span><br><span class="line">    primitiveOperation2()</span><br><span class="line">      templateMethod()</span><br><span class="line">      &#125;</span><br><span class="line">      class ConcreteClass&#123;</span><br><span class="line">       primitiveOperation1()</span><br><span class="line">      primitiveOperation2()</span><br><span class="line">      &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="对模板方法进行挂钩"><a href="#对模板方法进行挂钩" class="headerlink" title="对模板方法进行挂钩:"></a>对模板方法进行挂钩:</h3><p>定义在抽象类中，但只有空或默认的实现，使子类有能力对算法的不同点进行挂钩</p>
+<p>PSQ:什么时候使用抽象方法，什么时候使用钩子？</p>
+<p><font color='blue'>New  design principle:好莱坞原则</font></p>
+<p><font color='blue'>别调用我们，我们会调用你</font></p>
+<p><font color='blue'>允许底层组件挂钩到系统上，高层组件决定将自己挂钩到系统上</font></p>
+<h3 id="荒野中-java-api-的模板方法"><a href="#荒野中-java-api-的模板方法" class="headerlink" title="荒野中(java api)的模板方法:"></a>荒野中(java api)的模板方法:</h3><h3 id="用模板方法来排序"><a href="#用模板方法来排序" class="headerlink" title="用模板方法来排序"></a>用模板方法来排序</h3><p>compareto方法(返回是大于小于还是等于)</p>
+<p>看似好像不是模板模式，但是这个模板方法重点在于提供一个算法，用sort方法不是模板模式，但是体现模板精神</p>
+<p>Swing窗口和Applet作为钩子实现的例子</p>
+<p>&#x3D;&#x3D;<strong>要点:</strong>&#x3D;&#x3D;</p>
+<p>&#x3D;&#x3D;<strong>代码复用的重要技巧</strong>&#x3D;&#x3D;</p>
+<p><strong>&#x3D;&#x3D;为防止子类改变模板方法中的算法，将模板设为final&#x3D;&#x3D;</strong></p>
+<p><strong>&#x3D;&#x3D;决策权放在高层&#x3D;&#x3D;</strong></p>
+<p><strong>&#x3D;&#x3D;在真实代码中看到模板方法的许多变化，不一定能一眼识破&#x3D;&#x3D;</strong></p>
+<p><strong>&#x3D;&#x3D;策略和模板，一个用组合封装，一个用继承封装&#x3D;&#x3D;</strong></p>
+<p><strong>&#x3D;&#x3D;工厂模式是模板方法的特殊版本&#x3D;&#x3D;</strong></p>
+
         <p class="suffix-end">__END__</p>
         <div class="suffix-box">
             <div class="suffix-box-left">
@@ -67,7 +89,7 @@
             <div class="suffix-box-right">
                 <span class="suffix-box-title">文章作者</span>：Live For Code
                 <br>
-                <span class="suffix-box-title">文章出处</span>：<a href="/2022/03/31/%E2%80%9C2022-03-31%E9%9B%85%E6%80%9D%E2%80%9D/" target="_blank">2022.03.31雅思</a>
+                <span class="suffix-box-title">文章出处</span>：<a href="/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_blank">软件设计模式</a>
                 <br>
                 <span class="suffix-box-title">作者签名</span>：简单地活着, 肆意又精彩.
                 <br>
@@ -84,11 +106,11 @@
         
         <div class="article-prev-next">
             
-                <a href="/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="prev-prefix">« </a> 上一篇：    <a href="/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="发布于 2022-03-31 11:36">软件设计模式</a>
+                <a href="/2022/03/31/java-web/" class="prev-prefix">« </a> 上一篇：    <a href="/2022/03/31/java-web/" title="发布于 2022-03-31 05:01">java web</a>
                 <br>
             
             
-                <a href="/2022/03/30/markdown-l/" class="next-prefix">» </a> 下一篇：    <a href="/2022/03/30/markdown-l/" title="发布于 2022-03-30 03:46">markdown_l</a>
+                <a href="/2022/03/31/%E2%80%9C2022-03-31%E9%9B%85%E6%80%9D%E2%80%9D/" class="next-prefix">» </a> 下一篇：    <a href="/2022/03/31/%E2%80%9C2022-03-31%E9%9B%85%E6%80%9D%E2%80%9D/" title="发布于 2022-03-31 10:11">2022.03.31雅思</a>
             
         </div>
     </div>
