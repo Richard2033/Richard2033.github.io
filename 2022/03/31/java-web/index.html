@@ -21,7 +21,7 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648895615675" as="style">
+  <link rel="preload" href="/css/style.css?time=1648910663932" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T09:01:46.000Z">
-<meta property="article:modified_time" content="2022-03-31T09:55:21.206Z">
+<meta property="article:modified_time" content="2022-04-02T13:08:39.717Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648895615675" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648895615675"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648910663932" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648910663932"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648895615675","sites":"/js/plugins/sites.js?time=1648895615675","friends":"/js/plugins/friends.js?time=1648895615675","parallax":"/js/plugins/parallax.js?time=1648895615675","rightMenu":"/js/plugins/rightMenu.js?time=1648895615675","contributors":"/js/plugins/contributors.js?time=1648895615675","message":"/js/thirdparty/message.js?time=1648895615675","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648895615675","search":"/js/search/hexo.js?time=1648895615675"},"css":{"style":"/css/style.css?time=1648895615675","message":"/css/message.css?time=1648895615675"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648910663932","sites":"/js/plugins/sites.js?time=1648910663932","friends":"/js/plugins/friends.js?time=1648910663932","parallax":"/js/plugins/parallax.js?time=1648910663932","rightMenu":"/js/plugins/rightMenu.js?time=1648910663932","contributors":"/js/plugins/contributors.js?time=1648910663932","message":"/js/thirdparty/message.js?time=1648910663932","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648910663932","search":"/js/search/hexo.js?time=1648910663932"},"css":{"style":"/css/style.css?time=1648910663932","message":"/css/message.css?time=1648910663932"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1648895615675'),
+    lastupdate: new Date('1648910663932'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2573,6 +2573,43 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>urlPatterns</p>
 <p>servletNames</p>
 <p>initParams</p>
+<h3 id="8-4-监听器的分类与创建"><a href="#8-4-监听器的分类与创建" class="headerlink" title="8.4. 监听器的分类与创建"></a>8.4. 监听器的分类与创建</h3><p>根据监听对象</p>
+<p>划分为:Servletcontent</p>
+<p>HttpSession</p>
+<p>ServletRequest对象监听器</p>
+<br>
+
+<p>根据监听的事件 </p>
+<p>分为:对象自身的创建和销毁的监听器</p>
+<p>对象中属性的创建，修改，消除的监听器</p>
+<p>session中某个对象状态变化的监听器</p>
+<br>
+
+<p>监听器的 api</p>
+<p>Servletcontent:Listener，AttributeListener</p>
+<p>HttpSession:Action,Binding</p>
+<p>ServletRequest</p>
+<h4 id="8-4-1-监听对象自身创建和销毁的监听器"><a href="#8-4-1-监听对象自身创建和销毁的监听器" class="headerlink" title="8.4.1 监听对象自身创建和销毁的监听器"></a>8.4.1 监听对象自身创建和销毁的监听器</h4><p>HttpSessionListner</p>
+<p>ServletContextListner</p>
+<p>ServletRequestListenr</p>
+<p>分别监听session ，context，request的对象创建与销毁</p>
+<p>监听器启动顺序</p>
+<br>
+
+<h4 id="8-4-2监听对象属性变化的监听器"><a href="#8-4-2监听对象属性变化的监听器" class="headerlink" title="8.4.2监听对象属性变化的监听器"></a>8.4.2监听对象属性变化的监听器</h4><p>HttpSessionAttributeListener</p>
+<p>ServletContextAttributeListener</p>
+<p>ServletRequestAttributeListener</p>
+<p>分别监听session, context,request的属性变化</p>
+<p>在监听对象中添加，更新，移除属性时，分别执行 attributeAdded</p>
+<p>attributeReplaced  attributeRemoved</p>
+<br>
+
+<h4 id="8-4-3监听session中的某个对象状态变化的监听器"><a href="#8-4-3监听session中的某个对象状态变化的监听器" class="headerlink" title="8.4.3监听session中的某个对象状态变化的监听器"></a>8.4.3监听session中的某个对象状态变化的监听器</h4><p>监听绑定到HttpSession域中某个对象状态的事件监听器有HttpSessionBindingListener和</p>
+<p>HttpSessionActivationListener</p>
+<p>HttpSession中对象的状态有:绑定-&gt;解除绑定,钝化-&gt;活化</p>
+<p>序列和反序列化</p>
+<br>
+
 
 </div>
   </div>
@@ -2609,10 +2646,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-31T17:55:21+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-02T21:08:39+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 31, 2022</p>
+    <p>更新于：Apr 2, 2022</p>
   </a>
 </div>
 
@@ -2763,7 +2800,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%9B%E5%BB%BA"><span class="toc-text">8.4. 监听器的分类与创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-1-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E8%87%AA%E8%BA%AB%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.1 监听对象自身创建和销毁的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-2%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.2监听对象属性变化的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-3%E7%9B%91%E5%90%ACsession%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.3监听session中的某个对象状态变化的监听器</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -2932,7 +2969,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648895615675.js"></script>
+<script src="/js/app.js?time=1648910663932.js"></script>
 
 
 
@@ -3124,7 +3161,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648895615675')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648910663932')</script>
 
 
 
@@ -3137,19 +3174,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648895615675")
+        volantis.js("/js/plugins/sites.js?time=1648910663932")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648895615675")
+        volantis.js("/js/plugins/friends.js?time=1648910663932")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648895615675")
+        volantis.js("/js/plugins/contributors.js?time=1648910663932")
       }
     
   };
@@ -3274,7 +3311,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648895615675");
+    return volantis.js("/js/search/hexo.js?time=1648910663932");
   }
 
   function loadSearchService() {
@@ -3565,7 +3602,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-03-31T09:55:21.206Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-04-02T13:08:39.717Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
