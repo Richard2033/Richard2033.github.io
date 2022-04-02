@@ -21,23 +21,23 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648801361582" as="style">
+  <link rel="preload" href="/css/style.css?time=1648884607338" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>软件设计模式 - Richard cub blog</title>
   <meta name="keywords" content="null">
-  <meta name="description" content="8.模板方法模式（封装算法）模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现 这个方法专注在算法的本身，而由子类提供完整的实现 模式定义和所有细节：1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。 2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤 模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，还可以确保算法的结构不变，由">
+  <meta name="description" content="软件设计模式    8.模板方法模式（封装算法）模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现   这个方法专注在算法的本身，而由子类提供完整的实现   模式定义和所有细节：1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。 2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤 模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软件设计模式">
 <meta property="og:url" content="http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="Richard cub blog">
-<meta property="og:description" content="8.模板方法模式（封装算法）模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现 这个方法专注在算法的本身，而由子类提供完整的实现 模式定义和所有细节：1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。 2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤 模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，还可以确保算法的结构不变，由">
+<meta property="og:description" content="软件设计模式    8.模板方法模式（封装算法）模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现   这个方法专注在算法的本身，而由子类提供完整的实现   模式定义和所有细节：1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。 2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤 模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T03:36:53.000Z">
-<meta property="article:modified_time" content="2022-03-31T04:07:31.735Z">
+<meta property="article:modified_time" content="2022-04-02T07:28:49.352Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648801361582" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648801361582"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648884607338" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648884607338"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648801361582","sites":"/js/plugins/sites.js?time=1648801361582","friends":"/js/plugins/friends.js?time=1648801361582","parallax":"/js/plugins/parallax.js?time=1648801361582","rightMenu":"/js/plugins/rightMenu.js?time=1648801361582","contributors":"/js/plugins/contributors.js?time=1648801361582","message":"/js/thirdparty/message.js?time=1648801361582","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648801361582","search":"/js/search/hexo.js?time=1648801361582"},"css":{"style":"/css/style.css?time=1648801361582","message":"/css/message.css?time=1648801361582"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648884607338","sites":"/js/plugins/sites.js?time=1648884607338","friends":"/js/plugins/friends.js?time=1648884607338","parallax":"/js/plugins/parallax.js?time=1648884607338","rightMenu":"/js/plugins/rightMenu.js?time=1648884607338","contributors":"/js/plugins/contributors.js?time=1648884607338","message":"/js/thirdparty/message.js?time=1648884607338","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648884607338","search":"/js/search/hexo.js?time=1648884607338"},"css":{"style":"/css/style.css?time=1648884607338","message":"/css/message.css?time=1648884607338"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1648801361582'),
+    lastupdate: new Date('1648884607338'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2548,8 +2548,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="8-模板方法模式（封装算法）"><a href="#8-模板方法模式（封装算法）" class="headerlink" title="8.模板方法模式（封装算法）"></a>8.模板方法模式（封装算法）</h2><div class="story post-story"><p>模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现</p>
+    <div align='center'><font size='70'>软件设计模式</font></div>
+
+<br>
+
+<h2 id="8-模板方法模式（封装算法）"><a href="#8-模板方法模式（封装算法）" class="headerlink" title="8.模板方法模式（封装算法）"></a>8.模板方法模式（封装算法）</h2><div class="story post-story"><p>模板方法定义了一个算法的步骤，并允许子类为一个或多个步骤实现</p>
+<br>
+
 <p>这个方法专注在算法的本身，而由子类提供完整的实现</p>
+<br>
+
 <h3 id="模式定义和所有细节："><a href="#模式定义和所有细节：" class="headerlink" title="模式定义和所有细节："></a><strong>模式定义和所有细节：</strong></h3><p>1.在一个方法中定义了一个算法的骨架，而将一些步骤延迟到子类中。</p>
 <p>2.模板方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤</p>
 <p><font color='red'>模板就是一个方法，将算法定义成一组步骤，其中的任何步骤都可以是抽象的，还可以确保算法的结构不变，由子类提供部分实现</font></p>
@@ -2565,13 +2573,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       primitiveOperation2()
       }</pre>
 
+<br>
+
 <h3 id="对模板方法进行挂钩"><a href="#对模板方法进行挂钩" class="headerlink" title="对模板方法进行挂钩:"></a>对模板方法进行挂钩:</h3><p>定义在抽象类中，但只有空或默认的实现，使子类有能力对算法的不同点进行挂钩</p>
 <p>PSQ:什么时候使用抽象方法，什么时候使用钩子？</p>
+<br>
+
 <p><font color='blue'>New  design principle:好莱坞原则</font></p>
 <p><font color='blue'>别调用我们，我们会调用你</font></p>
 <p><font color='blue'>允许底层组件挂钩到系统上，高层组件决定将自己挂钩到系统上</font></p>
-<h3 id="荒野中-java-api-的模板方法"><a href="#荒野中-java-api-的模板方法" class="headerlink" title="荒野中(java api)的模板方法:"></a>荒野中(java api)的模板方法:</h3><h3 id="用模板方法来排序"><a href="#用模板方法来排序" class="headerlink" title="用模板方法来排序"></a>用模板方法来排序</h3><p>compareto方法(返回是大于小于还是等于)</p>
+<br>
+
+<h3 id="荒野中-java-api-的模板方法"><a href="#荒野中-java-api-的模板方法" class="headerlink" title="荒野中(java api)的模板方法:"></a>荒野中(java api)的模板方法:</h3><br>
+
+<h3 id="用模板方法来排序"><a href="#用模板方法来排序" class="headerlink" title="用模板方法来排序"></a>用模板方法来排序</h3><br>
+
+<p>compareto方法(返回是大于小于还是等于)</p>
+<br>
+
 <p>看似好像不是模板模式，但是这个模板方法重点在于提供一个算法，用sort方法不是模板模式，但是体现模板精神</p>
+<br>
+
 <p>Swing窗口和Applet作为钩子实现的例子</p>
 <p>&#x3D;&#x3D;<strong>要点:</strong>&#x3D;&#x3D;</p>
 <p>&#x3D;&#x3D;<strong>代码复用的重要技巧</strong>&#x3D;&#x3D;</p>
@@ -2580,7 +2602,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><strong>&#x3D;&#x3D;在真实代码中看到模板方法的许多变化，不一定能一眼识破&#x3D;&#x3D;</strong></p>
 <p><strong>&#x3D;&#x3D;策略和模板，一个用组合封装，一个用继承封装&#x3D;&#x3D;</strong></p>
 <p><strong>&#x3D;&#x3D;工厂模式是模板方法的特殊版本&#x3D;&#x3D;</strong></p>
+<br>
 
+</div><h2 id="第九章-迭代器与组合模式–良好的管理集合"><a href="#第九章-迭代器与组合模式–良好的管理集合" class="headerlink" title="第九章 迭代器与组合模式–良好的管理集合"></a>第九章 迭代器与组合模式–良好的管理集合</h2><div class="story post-story"><br>
+
+<p>(把对象堆起来成为一个集合)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Interator</span> <span class="variable">interator</span> <span class="operator">=</span>breakfastMenu.createIterator();</span><br><span class="line"><span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">   MenuItem.menuItem=(MenuItem)iterator.next();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;以上称之为:迭代器模式&#x3D;&#x3D;</p>
+<pre class="mermaid">classDiagram
+  class Iterator{
+<<interface>>
+bool hasNext()
+void next()
+   }
+   class DinerMenuIterator{
+   bool hasNext()
+  void next()
+   }
+   Iterator<|..DinerMenuIterator</pre>
+
+<p>实现迭代器，只需要一个循环，就可以多态地处理任何项的集合</p>
+<h3 id="定义迭代器模式："><a href="#定义迭代器模式：" class="headerlink" title="定义迭代器模式："></a>定义迭代器模式：</h3><p>1.提供了一种方法顺序访问一个聚合对象中的各个元素，而又不暴露内部的表示。</p>
+<p>2.把游走的任务放在迭代器上面，而不是聚合上，这样简化了聚合的借口和实现，也让责任各得其所。</p>
+<h3 id="单一责任"><a href="#单一责任" class="headerlink" title="单一责任:"></a>单一责任:</h3><p>设计原则:一个类应该只有一个引起变化的原因</p>
+<p>类的每个责任都有改变的潜在区域。超过一个责任，意味着超过一个改变的区域</p>
+<p>这个原则告诉我们尽量让每个类保持单一的责任。</p>
+<h3 id="迭代器与集合"><a href="#迭代器与集合" class="headerlink" title="迭代器与集合:"></a>迭代器与集合:</h3>
 </div>
   </div>
   
@@ -2616,10 +2664,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-31T12:07:31+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-02T15:28:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Mar 31, 2022</p>
+    <p>更新于：Apr 2, 2022</p>
   </a>
 </div>
 
@@ -2705,8 +2753,8 @@ dofilter  servlet调用service web服务器就会自动调用这个
         </a>
       
       
-        <a class='next' href='/2022/03/31/%E2%80%9C2022-03-31%E9%9B%85%E6%80%9D%E2%80%9D/'>
-          <p class='title'>2022.03.31雅思<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='next' href='/2022/03/31/2022-3-31%E9%9B%85%E6%80%9D/'>
+          <p class='title'>2022-3-31雅思<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>1.雅思长难句We’ve had a tradition of doctors being fairly powerful(动名词) and I guess they are pretty lo...</p>
         </a>
       
@@ -2756,7 +2804,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%B0%81%E8%A3%85%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-text">8.模板方法模式（封装算法）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E6%89%80%E6%9C%89%E7%BB%86%E8%8A%82%EF%BC%9A"><span class="toc-text">模式定义和所有细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8C%82%E9%92%A9"><span class="toc-text">对模板方法进行挂钩:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%92%E9%87%8E%E4%B8%AD-java-api-%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95"><span class="toc-text">荒野中(java api)的模板方法:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%9D%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">用模板方法来排序</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%B0%81%E8%A3%85%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-text">8.模板方法模式（封装算法）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E6%89%80%E6%9C%89%E7%BB%86%E8%8A%82%EF%BC%9A"><span class="toc-text">模式定义和所有细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8C%82%E9%92%A9"><span class="toc-text">对模板方法进行挂钩:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%92%E9%87%8E%E4%B8%AD-java-api-%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95"><span class="toc-text">荒野中(java api)的模板方法:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%9D%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">用模板方法来排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E2%80%93%E8%89%AF%E5%A5%BD%E7%9A%84%E7%AE%A1%E7%90%86%E9%9B%86%E5%90%88"><span class="toc-text">第九章 迭代器与组合模式–良好的管理集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-text">定义迭代器模式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB"><span class="toc-text">单一责任:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E9%9B%86%E5%90%88"><span class="toc-text">迭代器与集合:</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2925,7 +2973,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648801361582.js"></script>
+<script src="/js/app.js?time=1648884607338.js"></script>
 
 
 
@@ -3117,7 +3165,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648801361582')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648884607338')</script>
 
 
 
@@ -3130,19 +3178,19 @@ dofilter  servlet调用service web服务器就会自动调用这个
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648801361582")
+        volantis.js("/js/plugins/sites.js?time=1648884607338")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648801361582")
+        volantis.js("/js/plugins/friends.js?time=1648884607338")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648801361582")
+        volantis.js("/js/plugins/contributors.js?time=1648884607338")
       }
     
   };
@@ -3267,7 +3315,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648801361582");
+    return volantis.js("/js/search/hexo.js?time=1648884607338");
   }
 
   function loadSearchService() {
@@ -3558,7 +3606,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/软件设计模式/","name":"软件设计模式"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"软件设计模式","description":"","datePublished":"2022-03-31T03:36:53.000Z","dateModified":"2022-03-31T04:07:31.735Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/软件设计模式/","name":"软件设计模式"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"软件设计模式","description":"","datePublished":"2022-03-31T03:36:53.000Z","dateModified":"2022-04-02T07:28:49.352Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

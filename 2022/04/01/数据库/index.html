@@ -21,7 +21,7 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648801361582" as="style">
+  <link rel="preload" href="/css/style.css?time=1648884607338" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-04-01T06:39:06.000Z">
-<meta property="article:modified_time" content="2022-04-01T08:20:24.408Z">
+<meta property="article:modified_time" content="2022-04-02T01:13:15.457Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648801361582" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648801361582"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648884607338" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648884607338"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648801361582","sites":"/js/plugins/sites.js?time=1648801361582","friends":"/js/plugins/friends.js?time=1648801361582","parallax":"/js/plugins/parallax.js?time=1648801361582","rightMenu":"/js/plugins/rightMenu.js?time=1648801361582","contributors":"/js/plugins/contributors.js?time=1648801361582","message":"/js/thirdparty/message.js?time=1648801361582","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648801361582","search":"/js/search/hexo.js?time=1648801361582"},"css":{"style":"/css/style.css?time=1648801361582","message":"/css/message.css?time=1648801361582"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648884607338","sites":"/js/plugins/sites.js?time=1648884607338","friends":"/js/plugins/friends.js?time=1648884607338","parallax":"/js/plugins/parallax.js?time=1648884607338","rightMenu":"/js/plugins/rightMenu.js?time=1648884607338","contributors":"/js/plugins/contributors.js?time=1648884607338","message":"/js/thirdparty/message.js?time=1648884607338","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648884607338","search":"/js/search/hexo.js?time=1648884607338"},"css":{"style":"/css/style.css?time=1648884607338","message":"/css/message.css?time=1648884607338"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1648801361582'),
+    lastupdate: new Date('1648884607338'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2577,13 +2577,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <h4 id="3-6-1定义视图"><a href="#3-6-1定义视图" class="headerlink" title="3-6-1定义视图"></a>3-6-1定义视图</h4><br/>
 
-<p>视图概念：1.虚表:在数据库中不存在,由几个基本表或视图导出的表</p>
-<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;2.只存放视图的定义，不存在视图对应的数据</p>
-<p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;3.基本表数据改变，视图数据也会变</p>
-<p><code>建立视图</code><br><code>Create view</code></p>
-<p><code>&lt;视图名&gt;</code></p>
-<p><code>as</code></p>
-<p><code>&lt;子查询&gt;</code><br><code>with check option</code></p>
+<p>视图概念：</p>
+<p>1.虚表:在数据库中不存在,由几个基本表或视图导出的表</p>
+<p>2.只存放视图的定义，不存在视图对应的数据</p>
+<p>3.基本表数据改变，视图数据也会变</p>
+<p>建立视图</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Create view</span><br><span class="line"></span><br><span class="line">&lt;视图名&gt;</span><br><span class="line"></span><br><span class="line">as</span><br><span class="line"></span><br><span class="line">&lt;子查询&gt;</span><br><span class="line">with check option</span><br></pre></td></tr></table></figure>
+
 <p>1.基于多表的视图</p>
 <p>2.带表达式的视图</p>
 <p>3.分组视图</p>
@@ -2603,6 +2603,45 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p><font color='red'>视图对重构数据库提供了一定程度的逻辑独立性</font></p>
 <p><font color='red'>视图能够对机密数据提供安全保护</font></p>
 <p><font color='red'>适当的利用视图可以更清晰地表达查询</font></p>
+<br>
+
+<br>
+
+<br>
+
+<h3 id="第三章补充内容"><a href="#第三章补充内容" class="headerlink" title="第三章补充内容"></a>第三章补充内容</h3><br>
+
+<h4 id="sql完整性约束有"><a href="#sql完整性约束有" class="headerlink" title="sql完整性约束有:"></a>sql完整性约束有:</h4><p>1.“NOT NULL”非空约束，指定的列不允许为空值</p>
+<p>2.“UNIQUE”唯一约束，指定列中没有重复值</p>
+<p>3.“PRIMARY KEY”主键约束，唯一的标识出表的每一行</p>
+<p>4.“FOREIGN KEY”外键约束</p>
+<p>5、“CHECK”条件约束</p>
+<h4 id="完整性约束性子句"><a href="#完整性约束性子句" class="headerlink" title="完整性约束性子句:"></a>完整性约束性子句:</h4><p>1.完整性<a href="https://so.csdn.net/so/search?q=%E7%BA%A6%E6%9D%9F&spm=1001.2101.3001.7020">约束</a>命名子句格式:<br>CONSRTSINT &lt;完整性约束条件名&gt; &lt;完整性约束条件&gt;</p>
+<br>
+
+<p>2.引入目的:为了方便修改，删除约束条件</p>
+<br>
+
+<p>3.修改约束条件格式:</p>
+<p>例如：</p>
+<p>alter table 表名<br>drop CONSTRAINT 限制名&#x2F;&#x2F;删除限制</p>
+<br>
+
+<h4 id="触发器-trigger"><a href="#触发器-trigger" class="headerlink" title="触发器(trigger)"></a>触发器(trigger)</h4><br>
+
+<p>类似于约束，但比约束更加灵活，可以试试比约束更加复杂的检查和操作，具有更精准和更强大的数据控制能力</p>
+<br>
+
+<p>Create trigger&lt;触发器名&gt;</p>
+<p>[before after]    &lt;delete&#x2F;insert&#x2F;update&gt;</p>
+<p>Of &lt;属性列&gt; on&lt;表名&gt;</p>
+<p>begin </p>
+<p>PL&#x2F;SQL</p>
+<p>注意点</p>
+<p>触发器总是在</p>
+<p>数据库可以有多个或一个触发器(能少用就少用，减少电脑开销)</p>
+<p>触发器总是和某个数据库关联</p>
+</div><h2 id="第四章-数据库安全性"><a href="#第四章-数据库安全性" class="headerlink" title="第四章 数据库安全性"></a>第四章 数据库安全性</h2><div class="story post-story"><h3 id="4-1数据库安全性概述"><a href="#4-1数据库安全性概述" class="headerlink" title="4.1数据库安全性概述"></a>4.1数据库安全性概述</h3><p>4.1.1 数据库的不安全因素</p>
 
 </div>
   </div>
@@ -2639,10 +2678,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-01T16:20:24+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-02T09:13:15+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 1, 2022</p>
+    <p>更新于：Apr 2, 2022</p>
   </a>
 </div>
 
@@ -2718,6 +2757,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
+        <a class='prev' href='/2022/04/02/2022-4-1%E9%9B%85%E6%80%9D/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>2022-4-1雅思</p>
+          <p class='content'>1.雅思长难句In the face of(在什么面前) the frequent and often vivid media coverage(新闻报道), it is likely that...</p>
+        </a>
+      
       
         <a class='next' href='/2022/03/31/2022-3-31%E7%83%A6%E5%BF%83/'>
           <p class='title'>2022.3.31烦心<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
@@ -2778,7 +2822,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5%EF%BC%9A%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0"><span class="toc-text">3-5：数据更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-1-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-1:插入数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-2-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-2:修改数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-3-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-3:删除数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6视图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-1%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-1定义视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-2%E5%88%A0%E9%99%A4%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-2删除视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-3%E6%9F%A5%E8%AF%A2%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-3查询视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-4%E6%9B%B4%E6%96%B0%E8%A7%86%E5%9B%BE%EF%BC%88%E2%9C%96%EF%B8%8F%EF%BC%89"><span class="toc-text">3-6-4更新视图（✖️）</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="toc-text">第三章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5%EF%BC%9A%E6%95%B0%E6%8D%AE%E6%9B%B4%E6%96%B0"><span class="toc-text">3-5：数据更新</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-1-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-1:插入数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-2-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-2:修改数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-3-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-text">3-5-3:删除数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6视图</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-1%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-1定义视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-2%E5%88%A0%E9%99%A4%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-2删除视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-3%E6%9F%A5%E8%AF%A2%E8%A7%86%E5%9B%BE"><span class="toc-text">3-6-3查询视图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-4%E6%9B%B4%E6%96%B0%E8%A7%86%E5%9B%BE%EF%BC%88%E2%9C%96%EF%B8%8F%EF%BC%89"><span class="toc-text">3-6-4更新视图（✖️）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9"><span class="toc-text">第三章补充内容</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sql%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F%E6%9C%89"><span class="toc-text">sql完整性约束有:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F%E6%80%A7%E5%AD%90%E5%8F%A5"><span class="toc-text">完整性约束性子句:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A6%E5%8F%91%E5%99%A8-trigger"><span class="toc-text">触发器(trigger)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">第四章 数据库安全性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%80%A7%E6%A6%82%E8%BF%B0"><span class="toc-text">4.1数据库安全性概述</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2947,7 +2991,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648801361582.js"></script>
+<script src="/js/app.js?time=1648884607338.js"></script>
 
 
 
@@ -3139,7 +3183,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648801361582')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648884607338')</script>
 
 
 
@@ -3152,19 +3196,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648801361582")
+        volantis.js("/js/plugins/sites.js?time=1648884607338")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648801361582")
+        volantis.js("/js/plugins/friends.js?time=1648884607338")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648801361582")
+        volantis.js("/js/plugins/contributors.js?time=1648884607338")
       }
     
   };
@@ -3289,7 +3333,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648801361582");
+    return volantis.js("/js/search/hexo.js?time=1648884607338");
   }
 
   function loadSearchService() {
@@ -3580,7 +3624,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/04/01/数据库/","name":"数据库"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据库","description":"","datePublished":"2022-04-01T06:39:06.000Z","dateModified":"2022-04-01T08:20:24.408Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/04/01/%E6%95%B0%E6%8D%AE%E5%BA%93/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/04/01/%E6%95%B0%E6%8D%AE%E5%BA%93/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/04/01/数据库/","name":"数据库"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"数据库","description":"","datePublished":"2022-04-01T06:39:06.000Z","dateModified":"2022-04-02T01:13:15.457Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/04/01/%E6%95%B0%E6%8D%AE%E5%BA%93/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/04/01/%E6%95%B0%E6%8D%AE%E5%BA%93/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
