@@ -21,7 +21,7 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649152831850" as="style">
+  <link rel="preload" href="/css/style.css?time=1649600432681" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T09:01:46.000Z">
-<meta property="article:modified_time" content="2022-04-02T13:08:39.717Z">
+<meta property="article:modified_time" content="2022-04-07T10:20:35.659Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649152831850" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649152831850"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649600432681" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649600432681"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649152831850","sites":"/js/plugins/sites.js?time=1649152831850","friends":"/js/plugins/friends.js?time=1649152831850","parallax":"/js/plugins/parallax.js?time=1649152831850","rightMenu":"/js/plugins/rightMenu.js?time=1649152831850","contributors":"/js/plugins/contributors.js?time=1649152831850","message":"/js/thirdparty/message.js?time=1649152831850","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649152831850","search":"/js/search/hexo.js?time=1649152831850"},"css":{"style":"/css/style.css?time=1649152831850","message":"/css/message.css?time=1649152831850"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649600432681","sites":"/js/plugins/sites.js?time=1649600432681","friends":"/js/plugins/friends.js?time=1649600432681","parallax":"/js/plugins/parallax.js?time=1649600432681","rightMenu":"/js/plugins/rightMenu.js?time=1649600432681","contributors":"/js/plugins/contributors.js?time=1649600432681","message":"/js/thirdparty/message.js?time=1649600432681","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649600432681","search":"/js/search/hexo.js?time=1649600432681"},"css":{"style":"/css/style.css?time=1649600432681","message":"/css/message.css?time=1649600432681"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1649152831850'),
+    lastupdate: new Date('1649600432681'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2610,6 +2610,72 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>序列和反序列化</p>
 <br>
 
+</div><h2 id="第九章-EL和JSTL"><a href="#第九章-EL和JSTL" class="headerlink" title="第九章 EL和JSTL"></a>第九章 EL和JSTL</h2><div class="story post-story"><h3 id="EL"><a href="#EL" class="headerlink" title="EL"></a>EL</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>${表达式}</p>
+<p>(1)获得javabean的属性值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;user.<span class="property">age</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(2)获取数组中的元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;array[<span class="number">0</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(3)获取集合对象中的元素</p>
+<p>${array[0].name}.  ${array[0].age}</p>
+<p>  EL的错误处理机制</p>
+<p>1.对于null值直接以空字符串显示，而不是null</p>
+<p>2.在el中访问一个存在对象的不存在属性，EL抛出PropertyNotFoundException</p>
+<h4 id="EL运算符"><a href="#EL运算符" class="headerlink" title="EL运算符"></a>EL运算符</h4><p>算术运算符</p>
+<br>
+
+<p>关系运算符</p>
+<br>
+
+<p>逻辑运算符</p>
+<br>
+
+<p>empty运算符</p>
+<br>
+
+<p>条件运算符</p>
+<h4 id="EL隐含对象"><a href="#EL隐含对象" class="headerlink" title="EL隐含对象"></a>EL隐含对象</h4><p>1.与范围有关的：<br>applicationScope</p>
+<p>&lt;</p>
+<p>sessionScope</p>
+<p>&lt;</p>
+<p>requestScope</p>
+<p>&lt;</p>
+<p>pageScope</p>
+<h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><p>${EL隐含对象.关键字对象.属性}</p>
+<br>
+
+<p>2.与参数有关的</p>
+<p>param </p>
+<p>paramValues</p>
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><p>${EL隐含对象.参数名}</p>
+<br>
+
+<h3 id="JSTL"><a href="#JSTL" class="headerlink" title="JSTL"></a>JSTL</h3><h4 id="JSP标准标签库JSTL"><a href="#JSP标准标签库JSTL" class="headerlink" title="JSP标准标签库JSTL"></a>JSP标准标签库JSTL</h4><h5 id="核心标签库之通用标签"><a href="#核心标签库之通用标签" class="headerlink" title="核心标签库之通用标签"></a>核心标签库之通用标签</h5><p>&lt;c：out&gt;标签:用来显示数据的内容</p>
+<p>&lt;c：set&gt;标签 1.在page request session application设置作用域变量</p>
+<p>&lt;c：remove&gt;标签，可以删除某个变量</p>
+<p>2.设置 javabean 的属性</p>
+<h5 id="核心标签库之流程控制标签"><a href="#核心标签库之流程控制标签" class="headerlink" title="核心标签库之流程控制标签"></a>核心标签库之流程控制标签</h5><p>&lt;c：if&gt;标签实现if语句的作用</p>
+<p>&lt;c：choose&gt;,&lt;c：when&gt;,&lt;c：otherwise&gt;</p>
+<h5 id="核心标签库之迭代标签"><a href="#核心标签库之迭代标签" class="headerlink" title="核心标签库之迭代标签"></a>核心标签库之迭代标签</h5><p>&lt;c：foreEach&gt;实现for循环</p>
+<p> &lt;c：forTokens&gt;标签 用于迭代字符串中由分隔符号分隔的各成员</p>
+<h5 id="核心标签库之url标签"><a href="#核心标签库之url标签" class="headerlink" title="核心标签库之url标签"></a>核心标签库之url标签</h5><p>&lt;c：url&gt;标签用于在jsp页面中构造一个url地址。</p>
+<p>&lt;c：redirect&gt;标签用于执行重定向的功能，将当前访问请求重定向到其他资源</p>
+<p>&lt;c：import&gt;要想在某页面导入一个jsp，并传入参数</p>
+<h4 id="函数标签库"><a href="#函数标签库" class="headerlink" title="函数标签库"></a>函数标签库</h4><p>${fn:函数名(参数1,参数2,….)}</p>
+<p>contain  判断字符串是否有指定的字符串</p>
+<p>containsIgnoreCase（不区分大小写）</p>
+<p>endswith  判断字符串的是否以某个后缀结尾</p>
+<p>indexof 字符串第一次在字符串里面出现的索引</p>
+<p>join   将一个string 数组中的所有元素合并成一个字符串，并用指定的分隔符分开</p>
+<p>length  函数 </p>
+<p>replace  替换功能</p>
+<p>split 使用分隔符将字符串分离成一个子字符串数组</p>
+<p> startswith 判断是否以指定的前缀开头</p>
+<p>substring 返回一个字符串的子字符串</p>
+<p>tolowercase 转成它的小写版本</p>
+<p>touppercase 与上相反</p>
+<p>trim 将一个字符串的开头和结尾的空格去掉</p>
 
 </div>
   </div>
@@ -2646,10 +2712,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-02T21:08:39+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-07T18:20:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 2, 2022</p>
+    <p>更新于：Apr 7, 2022</p>
   </a>
 </div>
 
@@ -2795,7 +2861,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%9B%E5%BB%BA"><span class="toc-text">8.4. 监听器的分类与创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-1-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E8%87%AA%E8%BA%AB%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.1 监听对象自身创建和销毁的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-2%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.2监听对象属性变化的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-3%E7%9B%91%E5%90%ACsession%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.3监听session中的某个对象状态变化的监听器</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%9B%E5%BB%BA"><span class="toc-text">8.4. 监听器的分类与创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-1-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E8%87%AA%E8%BA%AB%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.1 监听对象自身创建和销毁的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-2%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.2监听对象属性变化的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-3%E7%9B%91%E5%90%ACsession%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.3监听session中的某个对象状态变化的监听器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-EL%E5%92%8CJSTL"><span class="toc-text">第九章 EL和JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EL"><span class="toc-text">EL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">EL运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1"><span class="toc-text">EL隐含对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-text">使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSTL"><span class="toc-text">JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E6%A0%87%E5%87%86%E6%A0%87%E7%AD%BE%E5%BA%93JSTL"><span class="toc-text">JSP标准标签库JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E9%80%9A%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之通用标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之流程控制标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之迭代标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8Burl%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之url标签</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A0%87%E7%AD%BE%E5%BA%93"><span class="toc-text">函数标签库</span></a></li></ol></li></ol></li></ol>
     </div>
   </section>
 
@@ -2964,7 +3030,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649152831850.js"></script>
+<script src="/js/app.js?time=1649600432681.js"></script>
 
 
 
@@ -3156,7 +3222,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649152831850')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649600432681')</script>
 
 
 
@@ -3169,19 +3235,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649152831850")
+        volantis.js("/js/plugins/sites.js?time=1649600432681")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649152831850")
+        volantis.js("/js/plugins/friends.js?time=1649600432681")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649152831850")
+        volantis.js("/js/plugins/contributors.js?time=1649600432681")
       }
     
   };
@@ -3306,7 +3372,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649152831850");
+    return volantis.js("/js/search/hexo.js?time=1649600432681");
   }
 
   function loadSearchService() {
@@ -3597,7 +3663,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-04-02T13:08:39.717Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-04-07T10:20:35.659Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

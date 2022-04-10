@@ -21,7 +21,7 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649152831850" as="style">
+  <link rel="preload" href="/css/style.css?time=1649600432681" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T03:36:53.000Z">
-<meta property="article:modified_time" content="2022-04-05T09:59:52.837Z">
+<meta property="article:modified_time" content="2022-04-07T03:54:01.658Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649152831850" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649152831850"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1649600432681" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1649600432681"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649152831850","sites":"/js/plugins/sites.js?time=1649152831850","friends":"/js/plugins/friends.js?time=1649152831850","parallax":"/js/plugins/parallax.js?time=1649152831850","rightMenu":"/js/plugins/rightMenu.js?time=1649152831850","contributors":"/js/plugins/contributors.js?time=1649152831850","message":"/js/thirdparty/message.js?time=1649152831850","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649152831850","search":"/js/search/hexo.js?time=1649152831850"},"css":{"style":"/css/style.css?time=1649152831850","message":"/css/message.css?time=1649152831850"}},
+    cdn: {"js":{"app":"/js/app.js?time=1649600432681","sites":"/js/plugins/sites.js?time=1649600432681","friends":"/js/plugins/friends.js?time=1649600432681","parallax":"/js/plugins/parallax.js?time=1649600432681","rightMenu":"/js/plugins/rightMenu.js?time=1649600432681","contributors":"/js/plugins/contributors.js?time=1649600432681","message":"/js/thirdparty/message.js?time=1649600432681","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649600432681","search":"/js/search/hexo.js?time=1649600432681"},"css":{"style":"/css/style.css?time=1649600432681","message":"/css/message.css?time=1649600432681"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1649152831850'),
+    lastupdate: new Date('1649600432681'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2668,25 +2668,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Interator</span> <span class="variable">interator</span> <span class="operator">=</span>breakfastMenu.createIterator();</span><br><span class="line"><span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">   MenuItem.menuItem=(MenuItem)iterator.next();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>&#x3D;&#x3D;以上称之为:迭代器模式&#x3D;&#x3D;</p>
-<pre class="mermaid">classDiagram
-  class Iterator{
-<<interface>>
-bool hasNext()
-void next()
-   }
-   class DinerMenuIterator{
-   bool hasNext()
-  void next()
-   }
-   Iterator<|..DinerMenuIterator</pre>
-
 <p>实现迭代器，只需要一个循环，就可以多态地处理任何项的集合</p>
 <h3 id="定义迭代器模式："><a href="#定义迭代器模式：" class="headerlink" title="定义迭代器模式："></a>定义迭代器模式：</h3><p>1.提供了一种方法顺序访问一个聚合对象中的各个元素，而又不暴露内部的表示。</p>
 <p>2.把游走的任务放在迭代器上面，而不是聚合上，这样简化了聚合的借口和实现，也让责任各得其所。</p>
 <h3 id="单一责任"><a href="#单一责任" class="headerlink" title="单一责任:"></a>单一责任:</h3><p>设计原则:一个类应该只有一个引起变化的原因</p>
 <p>类的每个责任都有改变的潜在区域。超过一个责任，意味着超过一个改变的区域</p>
 <p>这个原则告诉我们尽量让每个类保持单一的责任。</p>
-<h3 id="迭代器与集合"><a href="#迭代器与集合" class="headerlink" title="迭代器与集合:"></a>迭代器与集合:</h3>
+<h3 id="迭代器与集合"><a href="#迭代器与集合" class="headerlink" title="迭代器与集合:"></a>迭代器与集合:</h3><h3 id="定义组合模式"><a href="#定义组合模式" class="headerlink" title="定义组合模式:"></a>定义组合模式:</h3><p>允许你将对象组合成树形结构来表现“整体&#x2F;部分”层次结构。组合能让客户以一致的方式处理个别对象以及对象组合。</p>
+<p>组合模式让我们能用树形方式创建对象的结构，树里面包含了组合以及个别的对象。</p>
+<p>使用组合结构，我们能把相同的操作应用在组合和个体对象上。(即我们可以忽略对象组合和个别对象之间的差别)</p>
+<h1 id="第十章-状态模式"><a href="#第十章-状态模式" class="headerlink" title="第十章 状态模式"></a>第十章 状态模式</h1>
 </div>
   </div>
   
@@ -2722,10 +2713,10 @@ void next()
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-05T17:59:52+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-07T11:54:01+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 5, 2022</p>
+    <p>更新于：Apr 7, 2022</p>
   </a>
 </div>
 
@@ -2862,7 +2853,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%A5%E9%97%A8"><span class="toc-text">第一章.设计模式入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%BC%8F%E8%AF%8D%E6%B1%87%E7%9A%84%E5%A8%81%E5%8A%9B"><span class="toc-text">共享模式词汇的威力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">第二章.观察者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">第三章 装饰者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">第四章 工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8D%95%E4%BB%B6%E6%A8%A1%E5%BC%8F"><span class="toc-text">第五章 单件模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">第六章 命令模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">第七章 适配器模式与外观模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%B0%81%E8%A3%85%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-text">第八章.模板方法模式（封装算法）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E6%89%80%E6%9C%89%E7%BB%86%E8%8A%82%EF%BC%9A"><span class="toc-text">模式定义和所有细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8C%82%E9%92%A9"><span class="toc-text">对模板方法进行挂钩:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%92%E9%87%8E%E4%B8%AD-java-api-%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95"><span class="toc-text">荒野中(java api)的模板方法:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%9D%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">用模板方法来排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E2%80%93%E8%89%AF%E5%A5%BD%E7%9A%84%E7%AE%A1%E7%90%86%E9%9B%86%E5%90%88"><span class="toc-text">第九章 迭代器与组合模式–良好的管理集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-text">定义迭代器模式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB"><span class="toc-text">单一责任:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E9%9B%86%E5%90%88"><span class="toc-text">迭代器与集合:</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%85%A5%E9%97%A8"><span class="toc-text">第一章.设计模式入门</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B1%E4%BA%AB%E6%A8%A1%E5%BC%8F%E8%AF%8D%E6%B1%87%E7%9A%84%E5%A8%81%E5%8A%9B"><span class="toc-text">共享模式词汇的威力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">第二章.观察者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-text">第三章 装饰者模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">第四章 工厂模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%8D%95%E4%BB%B6%E6%A8%A1%E5%BC%8F"><span class="toc-text">第五章 单件模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-text">第六章 命令模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F%E4%B8%8E%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="toc-text">第七章 适配器模式与外观模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F%EF%BC%88%E5%B0%81%E8%A3%85%E7%AE%97%E6%B3%95%EF%BC%89"><span class="toc-text">第八章.模板方法模式（封装算法）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A8%A1%E5%BC%8F%E5%AE%9A%E4%B9%89%E5%92%8C%E6%89%80%E6%9C%89%E7%BB%86%E8%8A%82%EF%BC%9A"><span class="toc-text">模式定义和所有细节：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E8%BF%9B%E8%A1%8C%E6%8C%82%E9%92%A9"><span class="toc-text">对模板方法进行挂钩:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8D%92%E9%87%8E%E4%B8%AD-java-api-%E7%9A%84%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95"><span class="toc-text">荒野中(java api)的模板方法:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%9D%A5%E6%8E%92%E5%BA%8F"><span class="toc-text">用模板方法来排序</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%E2%80%93%E8%89%AF%E5%A5%BD%E7%9A%84%E7%AE%A1%E7%90%86%E9%9B%86%E5%90%88"><span class="toc-text">第九章 迭代器与组合模式–良好的管理集合</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%EF%BC%9A"><span class="toc-text">定义迭代器模式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%B8%80%E8%B4%A3%E4%BB%BB"><span class="toc-text">单一责任:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E9%9B%86%E5%90%88"><span class="toc-text">迭代器与集合:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="toc-text">定义组合模式:</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3031,7 +3022,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649152831850.js"></script>
+<script src="/js/app.js?time=1649600432681.js"></script>
 
 
 
@@ -3223,7 +3214,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649152831850')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1649600432681')</script>
 
 
 
@@ -3236,19 +3227,19 @@ dofilter  servlet调用service web服务器就会自动调用这个
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649152831850")
+        volantis.js("/js/plugins/sites.js?time=1649600432681")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649152831850")
+        volantis.js("/js/plugins/friends.js?time=1649600432681")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649152831850")
+        volantis.js("/js/plugins/contributors.js?time=1649600432681")
       }
     
   };
@@ -3373,7 +3364,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649152831850");
+    return volantis.js("/js/search/hexo.js?time=1649600432681");
   }
 
   function loadSearchService() {
@@ -3664,7 +3655,7 @@ dofilter  servlet调用service web服务器就会自动调用这个
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/软件设计模式/","name":"软件设计模式"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"软件设计模式","description":"","datePublished":"2022-03-31T03:36:53.000Z","dateModified":"2022-04-05T09:59:52.837Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/软件设计模式/","name":"软件设计模式"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"软件设计模式","description":"","datePublished":"2022-03-31T03:36:53.000Z","dateModified":"2022-04-07T03:54:01.658Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
