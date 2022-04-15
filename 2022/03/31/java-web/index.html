@@ -21,7 +21,7 @@
   <meta content="Richard cub blog" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1649862139176" as="style">
+  <link rel="preload" href="/css/style.css?time=1650011081258" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -37,7 +37,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-31T09:01:46.000Z">
-<meta property="article:modified_time" content="2022-04-11T12:23:39.760Z">
+<meta property="article:modified_time" content="2022-04-14T11:25:07.867Z">
 <meta property="article:author" content="Richard">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1670,8 +1670,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1649862139176" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1649862139176"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1650011081258" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1650011081258"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1742,9 +1742,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1649862139176","sites":"/js/plugins/sites.js?time=1649862139176","friends":"/js/plugins/friends.js?time=1649862139176","parallax":"/js/plugins/parallax.js?time=1649862139176","rightMenu":"/js/plugins/rightMenu.js?time=1649862139176","contributors":"/js/plugins/contributors.js?time=1649862139176","message":"/js/thirdparty/message.js?time=1649862139176","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1649862139176","search":"/js/search/hexo.js?time=1649862139176"},"css":{"style":"/css/style.css?time=1649862139176","message":"/css/message.css?time=1649862139176"}},
+    cdn: {"js":{"app":"/js/app.js?time=1650011081258","sites":"/js/plugins/sites.js?time=1650011081258","friends":"/js/plugins/friends.js?time=1650011081258","parallax":"/js/plugins/parallax.js?time=1650011081258","rightMenu":"/js/plugins/rightMenu.js?time=1650011081258","contributors":"/js/plugins/contributors.js?time=1650011081258","message":"/js/thirdparty/message.js?time=1650011081258","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1650011081258","search":"/js/search/hexo.js?time=1650011081258"},"css":{"style":"/css/style.css?time=1650011081258","message":"/css/message.css?time=1650011081258"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('1649862139176'),
+    lastupdate: new Date('1650011081258'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2725,6 +2725,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>用程序下载设置两个报头</p>
 <p>Content—type是一个保存到本地的下载文件</p>
 <p>Content—Disposition指定了接受程序处理数据内容的方式</p>
+</div><h2 id="第11章-jdbc数据库访问"><a href="#第11章-jdbc数据库访问" class="headerlink" title="第11章 jdbc数据库访问"></a>第11章 jdbc数据库访问</h2><div class="story post-story"><h3 id="11-1-使用纯java数据库驱动程序链接MySql"><a href="#11-1-使用纯java数据库驱动程序链接MySql" class="headerlink" title="11.1 使用纯java数据库驱动程序链接MySql"></a>11.1 使用纯java数据库驱动程序链接MySql</h3><p>jdbc链接数据库两种方法：建立JDBC—ODBC桥接器</p>
+<p>加载Java驱动程序：注册纯java数据库驱动程序;和指定的数据库建立连接</p>
+<h3 id="11-2数据库操作"><a href="#11-2数据库操作" class="headerlink" title="11.2数据库操作"></a>11.2数据库操作</h3><p>查询操作</p>
+<p>1.创建Statement对象</p>
+<p>2.执行sql查询语句</p>
+<p>3.处理查询结果</p>
+<br>
+
+<p>新增，更新与删除操作</p>
+<p>1.创建Statement对象</p>
+<p>2.执行SQL语句，完成新增，更新与删除操作</p>
+<br>
+
+<h3 id="11-3游动查询"><a href="#11-3游动查询" class="headerlink" title="11.3游动查询"></a>11.3游动查询</h3><p>有时需要结果集的游标前后移动，这时可以滚动结果集。为了获得滚动结果集</p>
+<p>用以下方法获取一个statement</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Statement st=con.createStatement(<span class="type">int</span>   type,<span class="type">int</span> concurrency);</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="11-4使用连接池"><a href="#11-4使用连接池" class="headerlink" title="11.4使用连接池"></a>11.4使用连接池</h3><p>为数据库连接建立一个缓冲池，预先在缓冲池里面放入一定数量的连接，当需要建立连接时，只需从缓冲池里面取出一个，使用完毕以后再放回去，可以通过连接池的管理机制监视数据库连接的数量及使用情况，为系统开发，测试和性能提供依据。</p>
 
 </div>
   </div>
@@ -2761,10 +2781,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-11T20:23:39+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-04-14T19:25:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Apr 11, 2022</p>
+    <p>更新于：Apr 14, 2022</p>
   </a>
 </div>
 
@@ -2847,9 +2867,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 第三章
 
-3.5：数据更新
-
- 1.数据更新中，所查询的，和修改的不在一张表，不能像查询一样链接表 要...</p>
+3.5：数据更新 1.数据更新中，所查询的，和修改的不在一张表，不能像查询一样链接表 要用子...</p>
         </a>
       
       
@@ -2909,7 +2927,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%9B%E5%BB%BA"><span class="toc-text">8.4. 监听器的分类与创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-1-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E8%87%AA%E8%BA%AB%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.1 监听对象自身创建和销毁的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-2%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.2监听对象属性变化的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-3%E7%9B%91%E5%90%ACsession%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.3监听session中的某个对象状态变化的监听器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-EL%E5%92%8CJSTL"><span class="toc-text">第九章 EL和JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EL"><span class="toc-text">EL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">EL运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1"><span class="toc-text">EL隐含对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-text">使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSTL"><span class="toc-text">JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E6%A0%87%E5%87%86%E6%A0%87%E7%AD%BE%E5%BA%93JSTL"><span class="toc-text">JSP标准标签库JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E9%80%9A%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之通用标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之流程控制标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之迭代标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8Burl%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之url标签</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A0%87%E7%AD%BE%E5%BA%93"><span class="toc-text">函数标签库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD"><span class="toc-text">第十章文件的上传和下载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1servlet%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-text">10.1servlet的文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MutipartConfig%E6%B3%A8%E8%A7%A3"><span class="toc-text">@MutipartConfig注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Part%E6%8E%A5%E5%8F%A3"><span class="toc-text">Part接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">10.2文件的下载</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="toc-text">第八章</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1fileter%E7%B1%BB%E5%92%8Cfilter%E5%AF%B9%E8%B1%A1"><span class="toc-text">8.1fileter类和filter对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-filterconfig%E7%B1%BB"><span class="toc-text">过滤器的api-filterconfig类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-FilterChain%E6%8E%A5%E5%8F%A3"><span class="toc-text">过滤器的api-FilterChain接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84api-GenericFilter%E5%92%8CHttpFilter%E5%AE%9E%E7%8E%B0%E7%B1%BB"><span class="toc-text">过滤器的api-GenericFilter和HttpFilter实现类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2filter%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">8.2filter对象的部署和运行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8web%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-text">在web对象的部署和运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E7%9A%84%E6%96%B9%E5%BC%8F%E9%83%A8%E7%BD%B2%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">基于注解的方式部署过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#webFilter"><span class="toc-text">@webFilter</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E7%9B%91%E5%90%AC%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%9B%E5%BB%BA"><span class="toc-text">8.4. 监听器的分类与创建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-1-%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E8%87%AA%E8%BA%AB%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.1 监听对象自身创建和销毁的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-2%E7%9B%91%E5%90%AC%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.2监听对象属性变化的监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-4-3%E7%9B%91%E5%90%ACsession%E4%B8%AD%E7%9A%84%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%8A%B6%E6%80%81%E5%8F%98%E5%8C%96%E7%9A%84%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">8.4.3监听session中的某个对象状态变化的监听器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-EL%E5%92%8CJSTL"><span class="toc-text">第九章 EL和JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#EL"><span class="toc-text">EL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">EL运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#EL%E9%9A%90%E5%90%AB%E5%AF%B9%E8%B1%A1"><span class="toc-text">EL隐含对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-text">使用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JSTL"><span class="toc-text">JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#JSP%E6%A0%87%E5%87%86%E6%A0%87%E7%AD%BE%E5%BA%93JSTL"><span class="toc-text">JSP标准标签库JSTL</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E9%80%9A%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之通用标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之流程控制标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8B%E8%BF%AD%E4%BB%A3%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之迭代标签</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E6%A0%87%E7%AD%BE%E5%BA%93%E4%B9%8Burl%E6%A0%87%E7%AD%BE"><span class="toc-text">核心标签库之url标签</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E6%A0%87%E7%AD%BE%E5%BA%93"><span class="toc-text">函数标签库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD"><span class="toc-text">第十章文件的上传和下载</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1servlet%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-text">10.1servlet的文件上传</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MutipartConfig%E6%B3%A8%E8%A7%A3"><span class="toc-text">@MutipartConfig注解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Part%E6%8E%A5%E5%8F%A3"><span class="toc-text">Part接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8B%E8%BD%BD"><span class="toc-text">10.2文件的下载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC11%E7%AB%A0-jdbc%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BF%E9%97%AE"><span class="toc-text">第11章 jdbc数据库访问</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E4%BD%BF%E7%94%A8%E7%BA%AFjava%E6%95%B0%E6%8D%AE%E5%BA%93%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F%E9%93%BE%E6%8E%A5MySql"><span class="toc-text">11.1 使用纯java数据库驱动程序链接MySql</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="toc-text">11.2数据库操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3%E6%B8%B8%E5%8A%A8%E6%9F%A5%E8%AF%A2"><span class="toc-text">11.3游动查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4%E4%BD%BF%E7%94%A8%E8%BF%9E%E6%8E%A5%E6%B1%A0"><span class="toc-text">11.4使用连接池</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3078,7 +3096,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1649862139176.js"></script>
+<script src="/js/app.js?time=1650011081258.js"></script>
 
 
 
@@ -3270,7 +3288,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1649862139176')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1650011081258')</script>
 
 
 
@@ -3283,19 +3301,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1649862139176")
+        volantis.js("/js/plugins/sites.js?time=1650011081258")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1649862139176")
+        volantis.js("/js/plugins/friends.js?time=1650011081258")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1649862139176")
+        volantis.js("/js/plugins/contributors.js?time=1650011081258")
       }
     
   };
@@ -3420,7 +3438,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1649862139176");
+    return volantis.js("/js/search/hexo.js?time=1650011081258");
   }
 
   function loadSearchService() {
@@ -3711,7 +3729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-04-11T12:23:39.760Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Richard cub blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"Richard cub blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/03/31/java-web/","name":"java web"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java web","description":"","datePublished":"2022-03-31T09:01:46.000Z","dateModified":"2022-04-14T11:25:07.867Z","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/03/31/java-web/"},"author":{"@type":"Person","name":"Richard","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"Richard cub blog","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/03/31/java-web/","wordCount":0,"image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
